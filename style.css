@@ -1,1 +1,395 @@
-body{margin:0}h1,h2,h3,h4,h5,h6,p{font-weight:400}
+/*--------------------
+    Normalize
+--------------------*/
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+li {
+  list-style: none;
+}
+/*--------------------
+    LESS variables
+--------------------*/
+/*----------*/
+/*.box-shadow() {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}*/
+/*--------------------
+    Styles
+--------------------*/
+html {
+  font-size: calc(31.25vw);
+  font-size: 100px;
+}
+.pageWrapper .headerWrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 0.6rem 0;
+  background: url("images/washingGirl.jpg") no-repeat center center;
+  background-size: 100% auto;
+}
+.pageWrapper .headerWrapper:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: '\a0';
+  margin: -30px;
+  background: url("images/washingGirl.jpg") no-repeat center center;
+  background-size: 100% auto;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+}
+.pageWrapper .headerWrapper:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  content: "\a0";
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.pageWrapper .headerWrapper > * {
+  position: relative;
+  z-index: 1;
+}
+.pageWrapper .headerWrapper h2 {
+  margin-bottom: 0.1rem;
+  color: #fff;
+  font-size: 0.2rem;
+  text-align: center;
+}
+.pageWrapper .headerWrapper h2 + span {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.12rem;
+  text-align: center;
+}
+.pageWrapper .headPortraitWrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: -0.5rem;
+  margin-bottom: 0.2rem;
+  text-align: center;
+}
+.pageWrapper .headPortraitWrapper img {
+  display: block;
+  margin: 0 auto 0.08rem auto;
+  border: 0.03rem solid palevioletred;
+  border-radius: 100%;
+  width: 1rem;
+  height: 1rem;
+}
+.pageWrapper .headPortraitWrapper .author {
+  display: block;
+  width: 100%;
+  font-size: 0.16rem;
+}
+.pageWrapper section h4 {
+  margin-bottom: 0.1rem;
+  border-left: 0.04rem solid palevioletred;
+  padding: 0.04rem 0.08rem;
+  font-size: 0.15rem;
+}
+.pageWrapper .basicInfo ul {
+  overflow: hidden;
+  padding: 0.15rem 0.3rem;
+  font-size: 0;
+}
+.pageWrapper .basicInfo ul li {
+  float: left;
+  box-sizing: border-box;
+  padding: 8px;
+  width: 50%;
+}
+.pageWrapper .basicInfo ul li:last-child {
+  width: 100%;
+}
+.pageWrapper .basicInfo ul li i {
+  float: left;
+  margin-right: 0.05rem;
+  border-radius: 100%;
+  width: 0.18rem;
+  height: 0.18rem;
+  background-color: palevioletred;
+  text-align: center;
+}
+.pageWrapper .basicInfo ul li i:before {
+  /*margin-right: 0.05rem;
+                        .circle(0.18rem);
+                        background-color: @theme-color;*/
+  height: 0.18rem;
+  color: #fff;
+  font-size: 0.1rem;
+  line-height: 0.18rem;
+}
+.pageWrapper .basicInfo ul li span {
+  font-size: 0.13rem;
+  line-height: 0.18rem;
+}
+.pageWrapper .basicInfo ~ section {
+  padding: 0.1rem 0.2rem;
+}
+.pageWrapper .skills ul {
+  padding: 0.06rem;
+}
+.pageWrapper .skills ul li {
+  padding: 0.06rem;
+  text-align: right;
+  font-size: 0;
+}
+.pageWrapper .skills ul li span {
+  font-size: 0.12rem;
+}
+.pageWrapper .skills ul li .processWrapper {
+  float: right;
+  margin-left: 0.06rem;
+  width: 80%;
+  height: 0.12rem;
+  background-color: #ddd;
+}
+.pageWrapper .skills ul li .processWrapper .process {
+  float: left;
+  width: 60%;
+  height: 100%;
+  background-color: palevioletred;
+}
+.pageWrapper .skills ul li .processWrapper .process.good {
+  width: 80%;
+  background-color: #cd4875;
+}
+.pageWrapper .skills ul li .processWrapper .process.poor {
+  width: 20%;
+  background-color: #e398b1;
+}
+.pageWrapper .tags ul {
+  padding: 0 0.2rem;
+  font-size: 0;
+}
+.pageWrapper .tags ul li {
+  position: relative;
+  display: inline-block;
+  margin: 0.05rem 0.1rem;
+  border-top-right-radius: 0.04rem;
+  border-bottom-right-radius: 0.04rem;
+  padding: 0 0.16rem;
+  background-color: palevioletred;
+  font-size: 0.12rem;
+  line-height: 0.2rem;
+  vertical-align: bottom;
+}
+.pageWrapper .tags ul li:before {
+  position: absolute;
+  top: 0;
+  left: -0.1rem;
+  display: block;
+  content: '\a0';
+  width: 0;
+  height: 0;
+  border-right: 0.1rem solid palevioletred;
+  border-bottom: 0.1rem solid transparent;
+  border-top: 0.1rem solid transparent;
+}
+.pageWrapper .tags ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.pageWrapper .tags ul li a:after {
+  position: absolute;
+  top: 0.05rem;
+  left: -0.05rem;
+  display: block;
+  content: '\a0';
+  box-sizing: border-box;
+  border: 0.02rem solid #b2305c;
+  border-radius: 0.1rem;
+  width: 0.1rem;
+  height: 0.1rem;
+  background-color: #fff;
+}
+.pageWrapper .experience ul li .period {
+  padding: 0.2rem 0 0.1rem 0.6rem;
+}
+.pageWrapper .experience ul li .period .detailsWrapper h5 {
+  position: relative;
+  margin-bottom: 0.1rem;
+  font-size: 0.14rem;
+}
+.pageWrapper .experience ul li .period .detailsWrapper h5 img {
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  margin-top: -0.2rem;
+  box-sizing: border-box;
+  border: 0.02rem solid #f9e8ee;
+  border-radius: 100%;
+  width: 0.4rem;
+  height: 0.4rem;
+}
+.pageWrapper .experience ul li .period .detailsWrapper p {
+  font-size: 0.12rem;
+}
+.pageWrapper .works ul {
+  padding: 0.15rem;
+}
+.pageWrapper .works ul li {
+  margin-bottom: 0.1rem;
+  font-size: 0;
+}
+.pageWrapper .works ul li img {
+  width: 100%;
+}
+.pageWrapper .works ul li .infoWrapper h6 {
+  font-size: 0.14rem;
+  line-height: 2;
+}
+.pageWrapper .works ul li .infoWrapper .workTime {
+  color: #ccc;
+  font-size: 0.12rem;
+}
+@media screen and (min-width: 321px) {
+  html {
+    font-size: 120px;
+  }
+}
+@media screen and (min-width: 376px) {
+  html {
+    font-size: 130px;
+  }
+}
+@media screen and (min-width: 415px) {
+  html {
+    font-size: 100px;
+  }
+}
+@media screen and (min-width: 600px) {
+  /*    html {
+        font-size: 100px;
+    }
+*/
+  .contentWrapper {
+    padding: 0.1rem 5%;
+  }
+  .contentWrapper section h4 {
+    border-bottom: 1px solid #ddd;
+  }
+  .contentWrapper .basicInfo ul {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0.15rem 0;
+    width: 84%;
+  }
+  .contentWrapper .basicInfo ul li {
+    width: 33.33%;
+  }
+  .contentWrapper .basicInfo ul li:last-child {
+    width: 66.67%;
+  }
+  .contentWrapper .skills ul,
+  .contentWrapper .tags ul {
+    margin: 0 auto;
+    width: 80%;
+  }
+  .contentWrapper .skills ul li {
+    padding-left: 0.6rem;
+    text-align: left;
+  }
+  .contentWrapper .skills ul li span {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-left: -0.6rem;
+    padding-right: 0.2rem;
+    width: 0.6rem;
+    text-align: right;
+  }
+  .contentWrapper .skills ul li .processWrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .contentWrapper .skills ul li .processWrapper .process {
+    float: none;
+    display: inline-block;
+  }
+  .contentWrapper .experience ul {
+    margin: 0 auto;
+    width: 86%;
+  }
+  .contentWrapper .works ul {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 86%;
+  }
+  .contentWrapper .works ul li {
+    float: left;
+    box-sizing: border-box;
+    padding: 0 0.1rem;
+    width: 50%;
+  }
+  .contentWrapper .works ul li .infoWrapper {
+    text-align: center;
+  }
+  .contentWrapper .works ul li .infoWrapper h6 {
+    position: relative;
+    margin-bottom: 0.1rem;
+  }
+  .contentWrapper .works ul li .infoWrapper h6:after {
+    position: absolute;
+    left: 50%;
+    bottom: -0.01rem;
+    display: block;
+    content: '\a0';
+    margin-left: -0.08rem;
+    width: 0.16rem;
+    height: 0;
+    border-bottom: 0.01rem solid;
+  }
+}
+@media screen and (min-width: 900px) {
+  html,
+  body {
+    background-color: #eee;
+  }
+  .pageWrapper {
+    position: relative;
+    margin: 0.4rem auto;
+    width: 900px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+  }
+  .pageWrapper:before,
+  .pageWrapper:after {
+    position: absolute;
+    bottom: 0.15rem;
+    z-index: -1;
+    display: block;
+    width: 40%;
+    height: 0.1rem;
+    content: '\a0';
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  .pageWrapper:before {
+    -webkit-transform: skew(-5deg) rotate(-5deg);
+    transform: skew(-5deg) rotate(-5deg);
+    left: 0.12rem;
+  }
+  .pageWrapper:after {
+    -webkit-transform: skew(5deg) rotate(5deg);
+    transform: skew(5deg) rotate(5deg);
+    right: 0.12rem;
+  }
+}
