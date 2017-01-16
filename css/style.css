@@ -37,7 +37,7 @@ html {
   overflow: hidden;
   position: relative;
   padding: 0.6rem 0;
-  background: url("images/washingGirl.jpg") no-repeat center center;
+  background: url("../images/washingGirl.jpg") no-repeat center center;
   background-size: 100% auto;
 }
 .pageWrapper .headerWrapper:before {
@@ -49,7 +49,7 @@ html {
   display: block;
   content: '\a0';
   margin: -30px;
-  background: url("images/washingGirl.jpg") no-repeat center center;
+  background: url("../images/washingGirl.jpg") no-repeat center center;
   background-size: 100% auto;
   -webkit-filter: blur(10px);
           filter: blur(10px);
