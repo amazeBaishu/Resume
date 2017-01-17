@@ -1,0 +1,82 @@
+    html {
+        height: 100%;
+    }
+    
+    body {
+        height: 100%;
+        background-color: #000;
+        color: #000;
+        font-family: 'Josefin Slab', 微软雅黑;
+    }
+    
+    #main {
+        position: relative;
+        width: 600px;
+        /*height: 400px;*/
+        /*position: absolute;*/
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #wrapper {
+        margin-bottom: 20px;
+        border-radius: 4px;
+        padding: 45px 50px;
+        overflow: hidden;
+        background-color: #fff;
+        /*color: #fff;*/
+    }
+    
+    #content {
+        font-size: 30px;
+    }
+    
+    #author {
+        float: right;
+        font-size: 20px;
+    }
+    
+    #buttons {
+        padding-top: 30px;
+        overflow: hidden;
+        clear: both;
+        color: #fff;
+    }
+    
+    #buttons a,
+    #buttons button {
+        display: inline-block;
+        border: none;
+        min-width: 42px;
+        min-height: 37px;
+        background-color: #000;
+        font-size: 18px;
+        outline: none;
+    }
+    
+    #buttons button:hover {
+        color: #fff;
+    }
+    
+    #buttons button:focus {
+        color: #fff;
+    }
+    
+    #share-to-fb {
+        margin-right: 5px;
+    }
+    
+    #share-to-fb,
+    #share-to-tw {
+        float: left;
+    }
+    
+    #get-quote {
+        float: right;
+        font-family: 微软雅黑;
+    }
+    
+    #copyright {
+        color: #fff;
+    }

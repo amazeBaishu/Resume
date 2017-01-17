@@ -251,14 +251,18 @@ html {
   margin-bottom: 0.1rem;
   font-size: 0;
 }
-.pageWrapper .works ul li img {
+.pageWrapper .works ul li a {
+  color: #000;
+  text-decoration: none;
+}
+.pageWrapper .works ul li a img {
   width: 100%;
 }
-.pageWrapper .works ul li .infoWrapper h6 {
+.pageWrapper .works ul li a .infoWrapper h6 {
   font-size: 0.14rem;
   line-height: 2;
 }
-.pageWrapper .works ul li .infoWrapper .workTime {
+.pageWrapper .works ul li a .infoWrapper .workTime {
   color: #ccc;
   font-size: 0.12rem;
 }
